@@ -21,17 +21,17 @@ import {
 export const description = "A line chart"
 
 const chartData = [
-{ month: "January", desktop: 28 },
-{ month: "February", desktop: 40 },
-{ month: "March", desktop: 53 },
-{ month: "April", desktop: 77 },
-{ month: "May", desktop: 154 },
-{ month: "June", desktop: 327 },
+{ month: "January", motivation: 28 },
+{ month: "February", motivation: 40 },
+{ month: "March", motivation: 53 },
+{ month: "April", motivation: 77 },
+{ month: "May", motivation: 154 },
+{ month: "June", motivation: 327 },
 ]
 
 const chartConfig = {
-  desktop: {
-    label: "Desktop",
+    motivation: {
+    label: "Motivation",
     color: "hsl(var(--chart-1))",
   },
 } satisfies ChartConfig
@@ -66,9 +66,9 @@ export function CustomBarChart() {
             content={<ChartTooltipContent hideLabel />}
           />
           <Line
-            dataKey="desktop"
+            dataKey="motivation"
             type="natural"
-            stroke="var(--color-desktop)"
+            stroke="var(--color-motivation)"
             strokeWidth={2}
             dot={false}
           />
