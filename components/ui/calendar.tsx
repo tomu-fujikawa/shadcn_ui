@@ -1,7 +1,6 @@
 "use client"
 
 import * as React from "react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
 import { DayPicker } from "react-day-picker"
 
 import { cn } from "@/lib/utils"
@@ -20,7 +19,6 @@ function Calendar({
   classNames,
   showOutsideDays = true,
   joinDay,
-  ...props
 }: CalendarProps2) {
   const modifiers = {
     joinDay: joinDay ? [joinDay] : [], // joinDayが存在する場合は配列に変換
@@ -69,11 +67,6 @@ function Calendar({
           joinDay: "bg-red-500 text-white", 
           range: "bg-blue-500 text-white", 
         }}
-      components={{
-        IconLeft: ({ ...props }) => <ChevronLeft className="h-4 w-4" />,
-        IconRight: ({ ...props }) => <ChevronRight className="h-4 w-4" />,
-      }}
-      {...props}
     />
   )
 }
